@@ -11,14 +11,14 @@ using System.Drawing;
 using System.Drawing.Imaging;
 
 
-namespace checkcode
+namespace zfcode
 {
     class Program{
         public static Random random = new Random();
         public static void Main(string[] args){
 
-         if (!Directory.Exists("img")){
-             Directory.CreateDirectory("img");
+         if (!Directory.Exists("img/zfxfzb_code")){
+             Directory.CreateDirectory("img/zfxfzb_code");
          }
             Console.Title = "dairoot";
             String show_str = "Captcha generator by dairoot \n\n" +
@@ -100,7 +100,7 @@ namespace checkcode
                 graphics.TranslateTransform(2f, (float)checked(-point2.Y));
             }
 
-            bitmap.Save("img/"+checkCode + ".gif", ImageFormat.Gif);
+            bitmap.Save("img/zfxfzb_code/"+checkCode + ".gif", ImageFormat.Gif);
 
         }
 
